@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sum Odd Number</title>
+</head>
+
+<body>
+<script>
+	var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+	function sumOddNumbers(numbers) {
+		// Bien luu tong
+		var sum = 0;
+		
+		// Lap mang va cong them tong neu i le
+		var length = numbers.length;
+		for (var i = 0; i < length; i++) {
+			if (numbers[i] % 2 != 0) {
+				sum += numbers[i];
+			}
+		}
+		document.write('Tổng số lẻ là: ' + sum);
+	}
+	sumOddNumbers(numbers);
+</script>
+</body>
+</html>

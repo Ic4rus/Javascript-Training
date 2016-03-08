@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculated Expression</title>
+</head>
+
+<body>
+<script>
+	function calculatedExpression(n) {
+		// Bien tong
+		var sum = 0;
+		
+		// Tinh
+		for (var i = 1; i <= n; i++) {
+			sum += (1 / i);
+		}
+		
+		return sum;
+	}
+	
+	// Lay gia tri
+	var n = parseInt(prompt('Nhập số cần tính', ''));
+	
+	// Kiem tra gia tri
+	if (n <= 0) {
+		alert('Bạn phải nhập số lớn hơn 0');
+	} else {
+		document.write('Tổng giá trị biểu thức là: ' + calculatedExpression(n));
+	}
+</script>
+</body>
+</html>

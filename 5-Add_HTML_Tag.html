@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Add HTML Tag</title>
+
+</head>
+
+<body>
+	<h1>Thêm thẻ HTML</h1>
+	
+	<input type="text" id="title" value="">
+	<input type="button" id="button_add" value="Add" onClick="addElement()">
+	
+	<div id="result"></div>
+<script>
+	function addElement() {
+		var title = document.getElementById('title').value;
+		if (title == '') {
+			alert('Bạn chưa nhập tiêu đề');
+		} else {
+			var html = '<div style="background: red; margin: 5px; padding: 5px; color: #fff">' + title + '</div>';
+			document.getElementById('result').insertAdjacentHTML('afterEnd', html);
+		}
+	}
+</script>	
+</body>
+</html>

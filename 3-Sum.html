@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sum</title>
+</head>
+
+<body>
+<script>
+	function sum(n) {
+		var sum = 0;
+		var index = 0;
+		
+		while (index <= n) {
+			if (index % 2 == 0) {
+				sum += index;
+			}
+			index++;
+		}
+		return sum;
+	}
+	
+	var n = parseInt(prompt('Nhập số', ''));
+	alert('Tổng số chẵn từ 1 đến ' + n + ' là: ' + sum(n));
+</script>
+</body>
+</html>

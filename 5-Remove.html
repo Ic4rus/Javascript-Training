@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Remove HTML Tag</title>
+<script>
+	window.onload = function() {
+		// Lay danh sach button
+		var buttons = document.getElementsByTagName('input');
+		
+		// Lap qua tung button
+		var length = buttons.length;
+		for (var i = 0; i < length; i++) {
+			// Gan su kien cho tung button
+			buttons[i].addEventListener('click', function() {
+				// Lay the tr
+				var parent = this.parentElement.parentElement;
+				parent.remove();
+			});
+		}
+	}
+</script>
+</head>
+
+<body>
+	<h1>Xóa thẻ HTML</h1>
+	<table border="1" cellspacing="0" cellpadding="5">
+		<tr>
+			<td>1</td>
+			<td>Tiêu đề thứ 1</td>
+			<td>
+				<input type="button" value="Delete">
+			</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Tiêu đề thứ 2</td>
+			<td>
+				<input type="button" value="Delete">			
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Tiêu đề thứ 3</td>
+			<td>
+				<input type="button" value="Delete">
+			</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Tiêu đề thứ 4</td>
+			<td>
+				<input type="button" value="Delete">
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

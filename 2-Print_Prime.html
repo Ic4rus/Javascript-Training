@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Print Prime</title>
+</head>
+
+<body>
+<script>
+
+	function checkPrime(n) {
+		var flag = true;
+		if (n < 2) {
+			flag = false;
+		} else if (n == 2) {
+			flag = true;
+		} else if (n % 2 == 0) {
+			flag = false;
+		} else {
+			var limit = Math.sqrt(n);
+			for (var i = 3; i < limit; i += 2) {
+				if (n % i == 0) {
+					flag = false;
+					break;
+				}
+			}
+		}
+		return flag;
+	}
+	
+	function printPrime() {
+		// Lay number
+		var number = document.getElementById('number').value;
+		
+		// Ep number sang kieu Int
+		number = parseInt(number);
+		
+		var html = '';
+		
+		for (var i = 0; i <= number; i++) {
+			if (checkPrime(i)) {
+				html += i + '<br>';
+			}
+		}
+		document.getElementById('result').innerHTML = html;		
+	}
+</script>
+<form action="" method="get">
+	Nhập số:
+	<input type="text" id="number" value="0">
+	<input type="button" value="In kết quả" onClick="printPrime()">
+</form>
+<div id="result"></div>
+</body>
+</html>

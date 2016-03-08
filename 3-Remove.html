@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Remove</title>
+</head>
+
+<body>
+<script>
+	function deleteElement() {
+		// Danh sach the div
+		var elements = document.getElementsByTagName('div');
+		
+		// Mang chua the can xoa
+		var removeElements = [];
+		
+		var index = 0;
+		var length = elements.length;
+		while (index < length) {
+			if (index != 0 && index % 2 != 0) {
+				removeElements.push(elements[index]);
+			}
+			index++;
+		}
+		// Thuc hien xoa
+		index = 0;
+		length = removeElements.length;
+		while (index < length) {
+			removeElements[index].remove();
+			index++;
+		}
+	}
+</script>
+<div>Lẻ</div>
+<div>Chẵn</div>
+<div>Lẻ</div>
+<div>Chẵn</div>
+<div>Lẻ</div>
+<div>Chẵn</div>
+<div>Lẻ</div>
+<div>Chẵn</div>
+<div>Lẻ</div>
+<div>Chẵn</div>
+<button onClick="deleteElement()">Remove</button>
+</body>
+</html>
